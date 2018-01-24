@@ -43,9 +43,9 @@ while True:
 
     force = 10 * ((mass * groundMass)/((700 - y)) ** 2)
     if y < 700 - radius:
-        y += int(force / friction)
+        y += math.ceil(force / friction)
     else:
-        y = 700- radius
+        y = 700 - radius
 
     testOBJ1 = pygame.draw.circle(DISPLAYSURF, WHITE, (x, y), radius, 0)
     
